@@ -2,6 +2,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0dee8d5a7b5413fabc252d018a47820)](https://app.codacy.com/app/Siabell/pdsw-lab5?utm_source=github.com&utm_medium=referral&utm_content=Siabell/pdsw-lab5&utm_campaign=Badge_Grade_Settings)
 
+[![CircleCI](https://circleci.com/gh/Siabell/pdsw-lab5.svg?style=svg)](https://circleci.com/gh/Siabell/pdsw-lab5)
+
 ## Procesos de desarrollo de Software – PDSW
 ## Parcial Práctico - 1er Tercio
 
