@@ -44,12 +44,14 @@ public class SalaryValidatorTest {
 					case INVALID_SALARY:
 						result= !(empleado.getSalary()<100 && empleado.getSalary()>50000);
 						break;
+					case INVALID_ID:
+						result=!(empleado.getPersonId()>=1000 && empleado.getPersonId()<=100000);
+						break;
 				}
 				return result;
 			}
 
 		});
-
-		//validator.validate(null);
+		
 	}
 }

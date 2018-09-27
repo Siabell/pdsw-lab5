@@ -20,7 +20,7 @@ public class EmployeeGenerator{
     }
 
     private static Gen<Integer> identificacion() {
-        return integers().from(1000).upToAndIncluding(100000);
+        return integers().from(0).upToAndIncluding(110000);
     }
 
     private static Gen<Long> salario () {

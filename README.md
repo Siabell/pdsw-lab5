@@ -60,7 +60,7 @@ Para la primera parte del parcial, se creará una clase encargada de realizar la
 
 2. Para la validación de un registro ante el sistema de seguridad social, se tienen las siguientes condiciones:
 	* Identificador:
-		* Debe ser un numérico entre 1.000 y 100.000
+		* Debe ser un numérico entre  //
 	* Nombre:
 		* Debe contener al menos 1 nombre y 1 apellido.
 		* La longitud debe ser entre 10 y 30 caracteres.

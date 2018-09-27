@@ -18,30 +18,35 @@ public class SalaryValidator implements EmployeeValidator {
 
 		long salario = employee.getSalary();
 		Optional<ErrorType> result = Optional.empty();
-		if (salario >= 100 && salario <= 50000){
-			SocialSecurityType afiliacion = employee.getSocialSecurityType();
-			switch (afiliacion){
-				case SISBEN:
-					if (!(salario >= 100 && salario <1500)){
-						result = Optional.of(ErrorType.INVALID_SISBEN_AFFILIATION);
-					}
-					break;
-				case EPS:
-					if (!(salario >= 1500 && salario <10000)){
-						result = Optional.of(ErrorType.INVALID_EPS_AFFILIATION);
-					}
-					break;
-				case PREPAID:
-					if (!(salario >= 10000 && salario <= 50000)){
-						result = Optional.of(ErrorType.INVALID_PREPAID_AFFILIATION);
-					}	
-					break;
-			}
-
-		} else {
-			result = Optional.of(ErrorType.INVALID_SALARY);
+		int id = employee.getPersonId();
+		if(id<1000 || id> 100000){
+			result = Optional.of(ErrorType.INVALID_ID);
 		}
+		else{
+			if (salario >= 100 && salario <= 50000){
+				SocialSecurityType afiliacion = employee.getSocialSecurityType();
+				switch (afiliacion){
+					case SISBEN:
+						if (!(salario >= 100 && salario <1500)){
+							result = Optional.of(ErrorType.INVALID_SISBEN_AFFILIATION);
+						}
+						break;
+					case EPS:
+						if (!(salario >= 1500 && salario <10000)){
+							result = Optional.of(ErrorType.INVALID_EPS_AFFILIATION);
+						}
+						break;
+					case PREPAID:
+						if (!(salario >= 10000 && salario <= 50000)){
+							result = Optional.of(ErrorType.INVALID_PREPAID_AFFILIATION);
+						}	
+						break;
+				}
 
-		return result;
+			} else {
+				result = Optional.of(ErrorType.INVALID_SALARY);
+			}
+		} 
+	return result;
 	}
 }
